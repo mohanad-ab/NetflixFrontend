@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netflix-movie-catalog
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: netflix-movie-catalog
+  template:
+    metadata:
+      labels:
+        app: netflix-movie-catalog
+    spec:
+      containers:
+      - name: netflix-movie-catalog
+        image: ghalebb/netflix_movie_catalog:0.0.1 
+        ports:
+        - containerPort: 8080
