@@ -7,6 +7,7 @@ pipeline {
     }
 
     triggers {
+
         githubPush() // Trigger the pipeline upon push event in GitHub
     }
 
